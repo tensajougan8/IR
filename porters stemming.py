@@ -126,9 +126,9 @@ class stemming:
 
 
 obj = stemming
-
+path = r"C:\Users\Valdo\Desktop\test\stemming"
 #Module imported and the function inverted index is used
-inverted_index(words,map)
+inverted_index(words,map,path)
 print(map)
 # d = r"C:\Users\Valdo\Desktop\test\stemming\index1.txt"
 # with open(d,'w') as data:

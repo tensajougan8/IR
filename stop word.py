@@ -12,7 +12,7 @@ class stopWord:
 
     def wordmatrix(words,map,stopwords):
         files = []
-        d = r"C:\Users\Valdo\Desktop\test"
+        d = r"C:\Users\Valdo\Desktop\test\st"
         for r, d, f in os.walk(d):
             for file in f:
                 if 'stopwords.txt' in file:

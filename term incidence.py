@@ -7,7 +7,7 @@ word = []
 count = 0
 map = dict()
 
-d = r"C:\Users\Valdo\Desktop\test"
+d = r"C:\Users\Valdo\Desktop\test\TM"
 
 files = []
 # r=root, d=directories, f = files
