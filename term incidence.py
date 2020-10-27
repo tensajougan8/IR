@@ -7,7 +7,7 @@ word = []
 count = 0
 map = dict()
 
-d = r"C:\Users\Valdo\Desktop\test\TM"
+d = r"C:\Users\Valdo\Desktop\test\TM\ca"
 
 files = []
 # r=root, d=directories, f = files
@@ -45,10 +45,10 @@ for key in word:
     map[key] = lst
 
 # print(map)
-print("{:<15} {:<8} {:<8} {:<8} {:<8} {:<8} {:<8}".format('Key','D1','D2','D3','D4','D5','D6'))
+print("{:<15} {:<8} {:<8} {:<8} {:<8} {:<8}".format('Key','D1','D2','D3','D4','D5'))
 for k, v in map.items():
-    d1, d2, d3, d4, d5, d6 = v
-    print("{:<15} {:<8} {:<8} {:<8} {:<8} {:<8} {:<8}".format(k, d1, d2, d3, d4, d5, d6))
+    d1, d2, d3, d4, d5= v
+    print("{:<15} {:<8} {:<8} {:<8} {:<8} {:<8}".format(k, d1, d2, d3, d4, d5))
 
 #Stack
 precedence ={"NOT": 3, "AND": 2, "OR": 1}

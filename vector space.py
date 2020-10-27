@@ -20,7 +20,7 @@ def initial_index(path, vectormap):
         tempwords = re.split(r'\W+', text)
 
         nonstemmedwords(tempwords, words, vectormap, count, filecount)
-        count +=1
+        count +=1 #to keep track of document no which will act as an index
 
 
 def nonstemmedwords(tempwords, words, map, index, filecount):
@@ -42,7 +42,7 @@ def nonstemmedwords(tempwords, words, map, index, filecount):
             new_list[index] = tempcount
             map[i] = new_list
 
-def find_idf(map, idfmap):
+def find_idf(map, idfmap):#finding the idf of a term and storing it in a document
     res = list(map.keys())[0]
     x = map[str(res)]
     len_of_list = len(x)
