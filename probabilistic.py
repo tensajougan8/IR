@@ -81,7 +81,7 @@ def calculate_weights_of_terms(vectormap):
         w2 = math.floor(w2 * 10 ** 3) / 10 ** 3
         w3 = math.log(((r + 0.5)/(R - r + 0.5))/((n + 1)/(N - n + 1)), 10)
         w3 = math.floor(w3 * 10 ** 3) / 10 ** 3
-        w4 = math.log(((r + 0.5)/(R - r + 0.5))/((n - r + 0.5)/(N - n - (R - r))), 10)
+        w4 = math.log(((r + 0.5)/(R - r + 0.5))/((n - r + 0.5)/(N - n - (R - r)+0.5)), 10)
         w4 = math.floor(w4 * 10 ** 3) / 10 ** 3
         x = [w1, w2, w3, w4]
         vectormap[key] = x
@@ -89,13 +89,14 @@ def calculate_weights_for_doc(vectormap, docmap, resultmap):
     for key in docmap.keys():
         for value in docmap[key]:
             if value in vectormap.keys():
-                if value in resultmap.keys():
-                    x = resultmap[value]
+                if key in resultmap.keys():
+                    x = resultmap[key]
                     x1 = vectormap[value]
                     y = []
-                    for index,x in enumerate(x):
-                        j = x[index] + x1[index]
+                    for index,ele in enumerate(x):
+                        j =x[index] + x1[index]
                         y.append(j)
+                    resultmap[key] = y
                 else:
                     x = vectormap[value]
                     resultmap[key] = x
